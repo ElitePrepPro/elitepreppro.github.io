@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Materials | ElitePrepPro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ElitePrepPro</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="materials.html">Materials</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Search Bar in the top-right corner -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search materials..." onkeyup="filterMaterials()">
+  </div>
+
+  <section class="downloads">
+    <h3>📘 Study Material Library</h3>
+
+    <div class="materials-grid" id="materialsGrid">
+      <div class="card" data-name="Physics Chapter 1">
+        <h4>Physics Chapter 1</h4>
+        <a href="materials/physics_ch1.pdf" download>Download</a>
+      </div>
+      <div class="card" data-name="Organic Chemistry Notes">
+        <h4>Organic Chemistry Notes</h4>
+        <a href="materials/organic_notes.pdf" download>Download</a>
+      </div>
+      <div class="card" data-name="Maths Formulas Handbook">
+        <h4>Maths Formulas Handbook</h4>
+        <a href="materials/maths_formulas.pdf" download>Download</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 ElitePrepPro. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterMaterials() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toLowerCase();
+      const materialsGrid = document.getElementById('materialsGrid');
+      const cards = materialsGrid.getElementsByClassName('card');
+
+      for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        const materialName = card.getAttribute('data-name').toLowerCase();
+
+        if (materialName.indexOf(filter) > -1) {
+          card.style.display = '';  // Show the card
+        } else {
+          card.style.display = 'none';  // Hide the card
+        }
+      }
+    }
+  </script>
+</body>
+</html>
