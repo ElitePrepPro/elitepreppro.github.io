@@ -2,34 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Downloads - ElitePrepPro</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Downloads | ElitePrepPro</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>ElitePrepPro Downloads</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="downloads.html">Downloads</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <h1>ElitePrepPro</h1>
+    <p>Your Ultimate Exam Preparation Hub</p>
   </header>
 
-  <!-- 🔥 Search Section -->
-  <section class="search-section">
-    <input type="text" id="search-bar" placeholder="Search materials..." />
-    <button id="search-btn">Search</button>
+  <!-- 🔍 Search Section -->
+  <section class="search-section" data-aos="fade-down">
+    <h2>Find Study Materials</h2>
+    <input type="text" placeholder="Search for material..." />
   </section>
+  <!-- 🧠 Filter Materials Section -->
+<section class="filter-section" data-aos="fade-up">
+  <h3>Filter by Exam or Type</h3>
+  <div class="filters">
+    <span class="filter">JEE</span>
+    <span class="filter">NEET</span>
+    <span class="filter">UPSC</span>
+    <span class="filter">Notes</span>
+    <span class="filter">Books</span>
+    <span class="filter">PYQs</span>
+  </div>
+</section>
 
-  <!-- ✅ Material Categories Section -->
+
+  <!-- ✅ Popular Material Categories -->
   <section class="categories-section">
     <h3>Popular Material Categories</h3>
     <div class="categories">
       <div class="category-card" data-aos="fade-right">
         <h4>JEE</h4>
-        <button class="btn">Download JEE Materials</button>
+        <button class="btn" onclick="window.location.href='jee.html'">
+          Download JEE Materials
+        </button>
+        
+
+        
       </div>
       <div class="category-card" data-aos="fade-up">
         <h4>NEET</h4>
@@ -42,28 +63,29 @@
     </div>
   </section>
 
-  <!-- 🎯 Featured Materials Section -->
+  <!-- 🎯 Featured Resources -->
   <section class="featured-materials">
     <h3>Featured Resources</h3>
     <div class="material-cards">
-      <div class="material-card" data-aos="fade-right">
+      <div class="material-card" data-aos="zoom-in">
         <h4>JEE Physics Notes</h4>
         <a href="#" class="btn">Download</a>
       </div>
-      <div class="material-card" data-aos="fade-up">
+      <div class="material-card" data-aos="zoom-in">
         <h4>NEET Chemistry PYQs</h4>
         <a href="#" class="btn">Download</a>
       </div>
-      <div class="material-card" data-aos="fade-left">
+      <div class="material-card" data-aos="zoom-in">
         <h4>UPSC Mains Papers</h4>
         <a href="#" class="btn">Download</a>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 ElitePrepPro. All rights reserved.</p>
-  </footer>
-
-  <!-- AOS Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
