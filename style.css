@@ -779,7 +779,95 @@ body {
   .material-card:hover .btn {
     background: #03a9f4;
   }
-  
+  /* 🔘 Button Hover Effect */
+.btn {
+  background: #03a9f4;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #00bcd4;
+  transform: scale(1.05);
+  color: #000;
+}
+
+/* 🟦 Card Hover Effect */
+.category-card,
+.material-card {
+  background: #2c5364;
+  padding: 30px;
+  width: 250px;
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover,
+.material-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔍 Search Bar Glow */
+.search-section input {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-section input:hover,
+.search-section input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #03a9f4;
+}
+/* 🧠 Filter Section Styling */
+.filter-section {
+  background: #1b1b1b;
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.filter-section h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filter {
+  padding: 10px 20px;
+  background: #2c5364;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid #03a9f4;
+}
+
+.filter:hover {
+  background: #03a9f4;
+  color: #000;
+  transform: scale(1.05);
+}
+
   
   
   
